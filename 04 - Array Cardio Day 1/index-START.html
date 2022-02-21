@@ -26,7 +26,9 @@
       { first: 'Lise', last: 'Meitner', year: 1878, passed: 1968 },
       { first: 'Hanna', last: 'Hammarström', year: 1829, passed: 1909 }
     ];
-
+    inventors.forEach(inventor => {
+      inventor.lives = inventor.passed - inventor.year
+    })
     const people = [
       'Bernhard, Sandra', 'Bethea, Erin', 'Becker, Carl', 'Bentsen, Lloyd', 'Beckett, Samuel', 'Blake, William', 'Berger, Ric', 'Beddoes, Mick', 'Beethoven, Ludwig',
       'Belloc, Hilaire', 'Begin, Menachem', 'Bellow, Saul', 'Benchley, Robert', 'Blair, Robert', 'Benenson, Peter', 'Benjamin, Walter', 'Berlin, Irving',
@@ -37,29 +39,62 @@
     
     // Array.prototype.filter()
     // 1. Filter the list of inventors for those who were born in the 1500's
-
+      let result = inventors.filter((inventor) =>{
+        return inventor.year > 1500 && inventor.year < 1600 ;
+      })
+      // console.table(result)
     // Array.prototype.map()
     // 2. Give us an array of the inventors first and last names
-
+      let result2 = inventors.map((inventor) => {
+        return `${inventor.first} ${inventor.last}`
+      })
+      // console.table(result2);
     // Array.prototype.sort()
     // 3. Sort the inventors by birthdate, oldest to youngest
-
+      let result3 = inventors.sort((a,b) => {
+          return a.year - b.year
+      })
+      // console.table(result3)
     // Array.prototype.reduce()
     // 4. How many years did all the inventors live all together?
-
+      let result4 = inventors.reduce((total, inventor) =>{
+        return total + (inventor.passed - inventor.year)
+      },0)
+      // console.table(result4);
     // 5. Sort the inventors by years lived
-
+      let result5 = inventors.sort((a,b) =>{
+        return (a.passed - a.year) > (b.passed - b.year) ? 1 : -1;
+      })
+      // console.table(result5);
     // 6. create a list of Boulevards in Paris that contain 'de' anywhere in the name
     // https://en.wikipedia.org/wiki/Category:Boulevards_in_Paris
-
-
+      let ary = []
+      document.querySelectorAll('.mw-category-group li a').forEach((a) =>{
+        ary.push(a.title)
+      })
+      let result6 = ary.filter((title) => {
+        return title.indexOf('de') !== -1   //Can't Find equal to -1
+        })
+      // console.log(result6)
     // 7. sort Exercise
     // Sort the people alphabetically by last name
-
+        let result7 = people.sort((a,b) => {
+          let [aLast, aFirst] = a.split(',');
+          let [bLast, bFirst] = b.split(',');
+          return aLast > bLast ? 1 : -1;
+        })
+      // console.table(result7)
     // 8. Reduce Exercise
     // Sum up the instances of each of these
     const data = ['car', 'car', 'truck', 'truck', 'bike', 'walk', 'car', 'van', 'bike', 'walk', 'car', 'van', 'car', 'truck' ];
-
+        let result8 = data.reduce((total, item) => {
+          if(!total[item]){
+            total[item] = 0;
+          }
+            total[item] += 1;
+            return total
+        },{})
+        console.table(result8)
   </script>
 </body>
 </html>
