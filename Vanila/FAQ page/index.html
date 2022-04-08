@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="title">
+      <h2>General Questions</h2>
+    </div>
+    <ul class="qa-list">
+      <li>
+        <div class="question">
+          <h4>Do You Accept All Major Credit Cards?</h4>
+            <button ><i class="bx bx-plus"></i>
+            <i class="bx bx-minus"></i></button>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perferendis, illo.
+          </p>
+        </div>
+      </li>
+      <li>
+        <div class="question">
+          <h4>Do You Accept All Major Credit Cards?</h4>
+          <button ><i class="bx bx-plus"></i>
+            <i class="bx bx-minus"></i></button>
+          </div>
+        </div>
+        <div class="answer">
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+            Perferendis, illo.
+          </p>
+        </div>
+      </li>
+    </ul>
+
+    <script>
+      const btns = document.querySelectorAll('button');
+
+      function clickHandler() {
+        const answer =
+          this.parentElement.parentElement.lastElementChild;
+        console.log(answer);
+        answer.classList.toggle('active');
+      }
+      btns.forEach(btn => btn.addEventListener('click', clickHandler));
+    </script>
+  </body>
+</html>
