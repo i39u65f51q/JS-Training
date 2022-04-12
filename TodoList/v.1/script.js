@@ -4,13 +4,12 @@ const listContent = document.querySelector('.list');
 
 const list = [];
 
-let id = 0;
 function addItem() {
   let li = '';
   li += `<li>
       <p>${input.value}</p>
       <button class="checked-btn"><i class="bx bx-check"></i></button>
-      <button class="deleted-btn" id="${id}"}><i class="bx bxs-trash"></i></button>
+      <button class="deleted-btn"}><i class="bx bxs-trash"></i></button>
       </li>`;
   list.push(li);
   listContent.innerHTML = list.join('');
