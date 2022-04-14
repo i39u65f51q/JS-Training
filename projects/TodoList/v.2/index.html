@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form action="#">
+        <input
+          class="text"
+          type="text"
+          placeholder="Text here to Add the new Task "
+          required
+        />
+        <!-- <input class="data-filter" type="text" list="data-filter" required>
+            <datalist id="data-filter">
+                <option value="Work"></option>
+                <option value="School"></option>
+                <option value="Others"></option>
+            </datalist> -->
+        <input class="submit" type="submit" value="Submit" />
+      </form>
+      <div class="filter">
+        <ul class="todo-filter">
+          <li class="active" id="all"><span>All</span></li>
+          <li id="pending"><span>Pending</span></li>
+          <li id="completed"><span>Completed</span></li>
+        </ul>
+      </div>
+      <ul class="list"></ul>
+      <footer>
+        <div class="footer-text">
+          <p>
+            The Total Tasks <span class="beV"> </span>
+            <span class="todo-length" style="color: red"> </span>
+          </p>
+        </div>
+        <button class="clearAll">Clear All</button>
+      </footer>
+    </div>
+  </body>
+  <script src="script.js"></script>
+</html>

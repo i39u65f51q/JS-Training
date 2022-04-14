@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Color Flipper</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      height: 100vh;
+    }
+    .container {
+      width: 90vw;
+      height: 90vh;
+      border-radius: 5px;
+      box-shadow: 5px 5px 3px #777;
+      border: 1px solid #000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      background-color: #fff;
+    }
+    .text {
+      border: 1px solid #000;
+      width: 500px;
+      text-align: center;
+      font-size: 24px;
+      border-radius: 5px;
+      background-color: #222;
+      color: #fff;
+    }
+    button {
+      position: absolute;
+      bottom: 15em;
+      width: 10em;
+      height: 50px;
+      letter-spacing: 3px;
+      background-color: transparent;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #eee;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="text">
+        <h4>BackGround Color : <span>White</span></h4>
+      </div>
+      <button>CLICK ME</button>
+    </div>
+    <script>
+      const colors = ['White', 'Red', 'Green', 'Gray', 'Yellow', 'Purple'];
+
+      function getColors() {
+        return Math.floor(Math.random() * colors.length);
+      }
+      function colorFlipped() {
+        const index = getColors();
+        document.querySelector('.container').style.backgroundColor =
+          colors[index];
+        const span = document.querySelector('span');
+        span.textContent = colors[index];
+        span.style.color = colors[index];
+      }
+
+      document.querySelector('button').addEventListener('click', colorFlipped);
+    </script>
+  </body>
+</html>

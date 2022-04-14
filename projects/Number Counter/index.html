@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Number Counter</title>
+  </head>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .text {
+      text-align: center;
+      margin-bottom: 2em;
+    }
+    .title {
+      font-weight: 800;
+      font-size: 24px;
+    }
+    .number {
+      font-size: 18px;
+    }
+    button {
+      margin: 0 3em;
+      width: 10em;
+      height: 3em;
+      font-weight: 600;
+      background-color: transparent;
+      border-radius: 5px;
+      box-shadow: 3px 3px 1px #222;
+      cursor: pointer;
+    }
+    button:hover {
+      transform: translate(3px, 3px);
+      box-shadow: none;
+    }
+  </style>
+  <body>
+    <div class="text">
+      <div class="title">Number Counter</div>
+      <h4 class="number">0</h4>
+    </div>
+    <div class="buttons">
+      <button class="decrease">Decrease</button>
+      <button class="reset">Reset</button>
+      <button class="increase">Increase</button>
+    </div>
+    <script>
+      const number = document.querySelector('.number');
+      const btns = document.querySelectorAll('button');
+
+      let num = 0;
+      function numberCounter(e) {
+        const item = e.target;
+        if (item.classList[0] == 'decrease') {
+          num--;
+        } else if (item.classList[0] == 'increase') {
+          num++;
+        } else {
+          num = 0;
+        }
+        if (num > 0) {
+          number.style.color = 'green';
+        } else if (num < 0) {
+          number.style.color = 'red';
+        } else {
+          number.style.color = '#000';
+        }
+        number.textContent = num;
+      }
+      btns.forEach(btn => btn.addEventListener('click', numberCounter));
+    </script>
+  </body>
+</html>
