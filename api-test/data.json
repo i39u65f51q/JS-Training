@@ -1,0 +1,16 @@
+{
+  "Images": [
+    {
+      "id": 1,
+      "imgName": "img1",
+      "src": "https://random.imagecdn.app/500/450",
+      "description": "This is First Photo."
+    },
+    {
+      "id": 2,
+      "imgName": "img2",
+      "src": "https://random.imagecdn.app/500/450",
+      "description": "This is Second Photo."
+    }
+  ]
+}
