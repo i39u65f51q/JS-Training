@@ -5,8 +5,74 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/main.css" />
   </head>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Poppins:wght@600&family=Square+Peg&display=swap');
+  </style>
   <body>
+    <header>
+      <h2>ALAN's BLOG</h2>
+      <p>Daily Record . .</p>
+    </header>
+    <main>
+      <div class="post-list">
+        <!-- Article - Start-->
+        <article>
+          <!-- Post Header -->
+          <div class="post-header">
+            <div class="poster">
+              <h4 class="user-name">Alan Chen</h4>
+              <h6 class="post-time">2022/4/15</h6>
+            </div>
+            <button class="edit-btn">
+              <i class="bx bx-dots-horizontal-rounded"></i>
+            </button>
+          </div>
+          <!-- Post Content -->
+          <div class="post-content">
+            <h3 class="title">Title of Article</h3>
+            <p>Here's the Article</p>
+          </div>
+          <!-- Post Footer -->
+          <div class="post-footer">
+            <!-- Emoji -->
+            <div class="emoji">
+              <div class="good">
+                <i class="bx bx-laugh"></i>
+                <span>1</span>
+              </div>
+              <div class="angry">
+                <i class="bx bx-angry"></i>
+                <span>1</span>
+              </div>
+            </div>
+            <!-- Delete Post -->
+            <button class="delete-btn">
+              <i class="bx bx-trash"></i>
+            </button>
+          </div>
+        </article>
+        <!-- Article - End -->
+      </div>
+      <aside>
+        <input type="button" class="add-post" value="ADD POST" />
+        <div class="write-post">
+          <input class="name" type="text" placeholder="Name" />
+          <input class="title" type="text" placeholder="Title" />
+          <input
+            class="post"
+            type="textarea"
+            placeholder="What do you think?"
+          />
+          <input class="submit" type="submit" value="Submit" />
+        </div>
+      </aside>
+    </main>
     <script src="script.js"></script>
   </body>
 </html>
