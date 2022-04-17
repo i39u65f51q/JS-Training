@@ -21,9 +21,7 @@
     </header>
     <main>
       <div class="post-list">
-        <!-- Article - Start-->
-        <article>
-          <!-- Post Header -->
+        <!-- <article>
           <div class="post-header">
             <div class="poster">
               <h4 class="user-name">Alan Chen</h4>
@@ -33,14 +31,11 @@
               <i class="bx bx-dots-horizontal-rounded"></i>
             </button>
           </div>
-          <!-- Post Content -->
           <div class="post-content">
             <h3 class="title">Title of Article</h3>
             <p>Here's the Article</p>
           </div>
-          <!-- Post Footer -->
           <div class="post-footer">
-            <!-- Emoji -->
             <div class="emoji">
               <div class="good">
                 <i class="bx bx-laugh"></i>
@@ -51,24 +46,17 @@
                 <span>1</span>
               </div>
             </div>
-            <!-- Delete Post -->
             <button class="delete-btn">
               <i class="bx bx-trash"></i>
             </button>
           </div>
-        </article>
-        <!-- Article - End -->
+        </article> -->
       </div>
       <aside>
-        <input type="button" class="add-post" value="ADD POST" />
         <div class="write-post">
-          <input class="name" type="text" placeholder="Name" />
-          <input class="title" type="text" placeholder="Title" />
-          <input
-            class="post"
-            type="textarea"
-            placeholder="What do you think?"
-          />
+          <input class="name" type="text" placeholder="Name" required />
+          <input class="title" type="text" placeholder="Title" required />
+          <textarea class="post" placeholder="Comments" required> </textarea>
           <input class="submit" type="submit" value="Submit" />
         </div>
       </aside>
