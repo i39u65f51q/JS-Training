@@ -51,15 +51,28 @@ body {
           }
           .edit-btn {
             background-color: transparent;
-            border: none;
+            color: rgb(111, 129, 164);
+            padding: 0 0.5rem;
+            border-radius: 3px;
             cursor: pointer;
-            font-size: 20px;
+            font-size: 16px;
           }
         }
         .post-content {
           width: 100%;
           margin: 0.5rem 0;
           aspect-ratio: 16/3;
+          input,
+          textarea {
+            width: 100%;
+            padding: 0.5rem 0.2rem;
+          }
+          input {
+            font-weight: 600;
+            font-size: 20px;
+          }
+          textarea {
+          }
           h3 {
             font-size: 22px;
           }
@@ -98,6 +111,9 @@ body {
             font-size: 18px;
             background-color: transparent;
             border: none;
+            i {
+              pointer-events: none;
+            }
           }
         }
       }
