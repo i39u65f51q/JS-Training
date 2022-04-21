@@ -1,0 +1,22 @@
+{
+  "post": [
+    {
+      "name": "Liao Liao",
+      "time": "2022/04/16",
+      "title": "I like",
+      "post": "Programming is the future.",
+      "like": 0,
+      "angry": 0,
+      "id": 2
+    },
+    {
+      "name": "Alan Chen ",
+      "time": "2022/3/2",
+      "title": "Test 123456",
+      "post": " 123456",
+      "like": 0,
+      "angry": 0,
+      "id": 4
+    }
+  ]
+}
