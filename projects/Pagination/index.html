@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <style>
+    .pagination ul {
+      display: flex;
+      gap: 1em;
+      list-style: none;
+    }
+    .pagination ul li {
+      cursor: pointer;
+    }
+    .prev.hide {
+      pointer-events: none;
+      opacity: 0;
+    }
+    .next.hide {
+      pointer-events: none;
+      opacity: 0;
+    }
+    i {
+      pointer-events: none;
+    }
+    .active {
+      color: red;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <ul></ul>
+    </div>
+    <nav class="pagination">
+      <ul>
+        <li class="prev"><i class="bx bx-chevron-left"></i></li>
+        <li class="active page">1</li>
+        <li class="page">2</li>
+        <li class="next"><i class="bx bx-chevron-right"></i></li>
+      </ul>
+    </nav>
+    <script src="script.js"></script>
+  </body>
+</html>
