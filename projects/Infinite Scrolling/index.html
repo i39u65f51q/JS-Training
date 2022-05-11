@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    ul {
+      border: 1px solid red;
+      width: 200px;
+      height: 300px;
+      max-height: 300px;
+      overflow-y: auto;
+    }
+    li {
+      padding: 1em;
+      border: 1px solid #000;
+      /* margin: 1em; */
+    }
+    li:hover {
+      background-color: #eee;
+    }
+  </style>
+  <body>
+    <ul></ul>
+    <script>
+      const ul = document.querySelector('ul');
+
+      let numOfItem = 1;
+      function loadMore() {
+        for (let i = 0; i < 20; i++) {
+          const li = document.createElement('li');
+          li.textContent = 'item' + numOfItem++;
+          ul.append(li);
+        }
+      }
+      //render
+      window.addEventListener('DOMContentLoaded', loadMore);
+      ul.addEventListener('scroll', () => {
+        const ulRectHeight = ul.getBoundingClientRect().height;
+        if (ul.scrollTop + ulRectHeight >= ul.scrollHeight) {
+          loadMore();
+        }
+        console.log(ul.scrollTop, ulRectHeight, ul.scrollHeight);
+      });
+    </script>
+  </body>
+</html>
